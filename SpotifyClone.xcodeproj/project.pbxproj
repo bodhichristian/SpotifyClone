@@ -10,6 +10,9 @@
 		AA4E9E852BB8ED8C0093C769 /* View-ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */; };
 		AA4E9E872BB8EDE70093C769 /* SpotifyNewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */; };
 		AA4E9E892BB915280093C769 /* ImageTitleRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */; };
+		AA5F591B2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */; };
+		AA5F591D2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591C2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift */; };
+		AA5F591F2BBA232100ACF054 /* PlaylistDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591E2BBA232100ACF054 /* PlaylistDescriptionCell.swift */; };
 		AADD103E2BB4C35900E2DE4B /* SpotifyCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD103D2BB4C35900E2DE4B /* SpotifyCloneApp.swift */; };
 		AADD10402BB4C35900E2DE4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD103F2BB4C35900E2DE4B /* ContentView.swift */; };
 		AADD10422BB4C35B00E2DE4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADD10412BB4C35B00E2DE4B /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 		AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ThemeColors.swift"; sourceTree = "<group>"; };
 		AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyNewReleaseCell.swift; sourceTree = "<group>"; };
 		AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleRowCell.swift; sourceTree = "<group>"; };
+		AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylistView.swift; sourceTree = "<group>"; };
+		AA5F591C2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCell.swift; sourceTree = "<group>"; };
+		AA5F591E2BBA232100ACF054 /* PlaylistDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDescriptionCell.swift; sourceTree = "<group>"; };
 		AADD103A2BB4C35900E2DE4B /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADD103D2BB4C35900E2DE4B /* SpotifyCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCloneApp.swift; sourceTree = "<group>"; };
 		AADD103F2BB4C35900E2DE4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				AADD10662BB4D03500E2DE4B /* SpotifyCategoryCell.swift */,
+				AA5F591E2BBA232100ACF054 /* PlaylistDescriptionCell.swift */,
+				AA5F591C2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift */,
 				AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */,
 				AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */,
 				AADD10722BB79CFB00E2DE4B /* SpotifyRecentsCell.swift */,
@@ -145,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				AADD10622BB4CE7600E2DE4B /* SpotifyHomeView.swift */,
+				AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -232,6 +241,7 @@
 				AADD10502BB4C3EA00E2DE4B /* ImageLoaderView.swift in Sources */,
 				AADD10692BB4D1D700E2DE4B /* Category.swift in Sources */,
 				AA4E9E872BB8EDE70093C769 /* SpotifyNewReleaseCell.swift in Sources */,
+				AA5F591B2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift in Sources */,
 				AADD10672BB4D03500E2DE4B /* SpotifyCategoryCell.swift in Sources */,
 				AADD10402BB4C35900E2DE4B /* ContentView.swift in Sources */,
 				AADD10632BB4CE7600E2DE4B /* SpotifyHomeView.swift in Sources */,
@@ -242,7 +252,9 @@
 				AADD10542BB4C6BC00E2DE4B /* DataBaseHelper.swift in Sources */,
 				AA4E9E852BB8ED8C0093C769 /* View-ThemeColors.swift in Sources */,
 				AADD10592BB4C95400E2DE4B /* Product.swift in Sources */,
+				AA5F591D2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift in Sources */,
 				AA4E9E892BB915280093C769 /* ImageTitleRowCell.swift in Sources */,
+				AA5F591F2BBA232100ACF054 /* PlaylistDescriptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
