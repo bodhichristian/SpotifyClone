@@ -17,8 +17,7 @@ struct SpotifyCategoryCell: View {
             .frame(minWidth: 32)
             .padding(.vertical, 8)
             .padding(.horizontal, 10)
-            .background(isSelected ? .spotifyGreen : .spotifyGray)
-            .foregroundStyle(isSelected ? .spotifyBlack : .spotifyWhite)
+            .themeColors(isSelected: isSelected)
             .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }

@@ -2,8 +2,9 @@
 //  SpotifyRecentsCell.swift
 //  SpotifyClone
 //
-//  Created by christian on 3/29/24.
+//  Created by christian on 3/28/24.
 //
+
 import SwiftUI
 
 struct SpotifyRecentsCell: View {
@@ -19,10 +20,11 @@ struct SpotifyRecentsCell: View {
                 .font(.callout)
                 .fontWeight(.semibold)
                 .lineLimit(2)
+            
         }
         .padding(.trailing)
-        .background(Color.spotifyGray)
-        .foregroundStyle(.spotifyWhite)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .themeColors(isSelected: false)
         .clipShape(RoundedRectangle(cornerRadius: 6))
     }
 }
