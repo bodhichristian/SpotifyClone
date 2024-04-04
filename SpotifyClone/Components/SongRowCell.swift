@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SongRowCell: View {
-    let imageSize: CGFloat = 100
-    let imageURL: String = Constants.randomImage
-    let title: String = "Song name"
-    let subtitle: String? = "Artist name"
+    var imageSize: CGFloat = 50
+    var imageURL: String = Constants.randomImage
+    var title: String = "Song name"
+    var subtitle: String? = "Artist name"
     
     var onCellPressed: (() -> Void)? = nil
     var onEllipsisPressed: (() -> Void)? = nil
@@ -33,11 +33,21 @@ struct SongRowCell: View {
                         .foregroundStyle(.spotifyLightGray)
                 }
             }
-            
+            .lineLimit(2)
+            .frame(maxWidth: .infinity, alignment: .leading)
+
             Image(systemName: "ellipsis")
                 .foregroundStyle(.spotifyWhite)
+                .padding(16)
+                .background(Color.spotifyBlack.opacity(0.001))
+                .onTapGesture {
+                    onEllipsisPressed?()
+                }
         }
-        .frame(maxWidth: .infinity)
+        .background(Color.spotifyBlack.opacity(0.001))
+        .onTapGesture {
+            onCellPressed?()
+        }
     }
     
 }

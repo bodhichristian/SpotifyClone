@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA4A96BD2BBDD2120002A7ED /* SongRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96BC2BBDD2120002A7ED /* SongRowCell.swift */; };
+		AA4A96BF2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96BE2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift */; };
 		AA4E9E852BB8ED8C0093C769 /* View-ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */; };
 		AA4E9E872BB8EDE70093C769 /* SpotifyNewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */; };
 		AA4E9E892BB915280093C769 /* ImageTitleRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		AA4A96BC2BBDD2120002A7ED /* SongRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRowCell.swift; sourceTree = "<group>"; };
+		AA4A96BE2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-SwipeToDismiss.swift"; sourceTree = "<group>"; };
 		AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ThemeColors.swift"; sourceTree = "<group>"; };
 		AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyNewReleaseCell.swift; sourceTree = "<group>"; };
 		AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleRowCell.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */,
+				AA4A96BE2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				AADD10402BB4C35900E2DE4B /* ContentView.swift in Sources */,
 				AADD10632BB4CE7600E2DE4B /* SpotifyHomeView.swift in Sources */,
 				AADD10572BB4C92B00E2DE4B /* User.swift in Sources */,
+				AA4A96BF2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift in Sources */,
 				AADD103E2BB4C35900E2DE4B /* SpotifyCloneApp.swift in Sources */,
 				AADD10522BB4C49C00E2DE4B /* Constants.swift in Sources */,
 				AADD10732BB79CFB00E2DE4B /* SpotifyRecentsCell.swift in Sources */,
