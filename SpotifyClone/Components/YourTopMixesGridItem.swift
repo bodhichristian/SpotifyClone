@@ -49,12 +49,13 @@ struct YourTopMixesGridItem: View {
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             
-            VStack(alignment: .leading, spacing: 0) {
+            HStack (alignment: .bottom,  spacing: 0) {
                 
                 Text(title)
-                    .lineLimit(2)
-                Text("Mix")
+                Text(" Mix")
             }
+            .lineLimit(2)
+
             .font(.headline)
             .fontWeight(.bold)
             .foregroundStyle(.spotifyWhite)
