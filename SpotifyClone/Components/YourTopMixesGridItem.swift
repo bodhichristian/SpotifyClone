@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ArtistMixOverlay: View {
-    var artistName: String = "Artist Name"
+struct YourTopMixesGridItem: View {
+    var imageURL: String
+    var title: String
     let colors: [Color] = [
         .playlistPink,
         .playlistMauve,
@@ -18,6 +19,7 @@ struct ArtistMixOverlay: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
+            ImageLoaderView(url: imageURL)
             LinearGradient(
                 colors: [
                     .spotifyBlack.opacity(0.01),
@@ -26,6 +28,7 @@ struct ArtistMixOverlay: View {
                 startPoint: .top,
                 endPoint: .bottom
             )
+            
             VStack(alignment: .leading) {
                 Image(systemName: "wave.3.forward.circle.fill")
                     .font(.footnote)
@@ -48,7 +51,7 @@ struct ArtistMixOverlay: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 
-                Text(artistName)
+                Text(title)
                     .lineLimit(2)
                 Text("Mix")
             }
@@ -58,6 +61,8 @@ struct ArtistMixOverlay: View {
             .padding(.leading, 16)
             .padding(.bottom, 12)
         }
+        .frame(width: 160, height: 160)
+
     }
 }
 
@@ -65,7 +70,7 @@ struct ArtistMixOverlay: View {
     Rectangle()
         .frame(width: 160, height: 160).overlay {
             ImageLoaderView(url: Constants.randomImage)
-            ArtistMixOverlay(artistName: "Green Day")
+            YourTopMixesGridItem(imageURL: Constants.randomImage, title: "Green Day")
             
         }
 }

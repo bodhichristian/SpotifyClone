@@ -116,11 +116,7 @@ struct SpotifyHomeView: View {
                 ScrollView(.horizontal) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(products) { product in
-                            PlaylistGridItem(
-                                imageURL: product.firstImage,
-                                title: product.title,
-                                style: .yourTopMixes
-                            )
+                            YourTopMixesGridItem(imageURL: product.firstImage, title: product.title)
                             .asButton(.press) {
                                 goToPlayListView(product: product)
                             }
@@ -128,7 +124,6 @@ struct SpotifyHomeView: View {
                     }
                     .padding(.horizontal, 16)
                 }
-                
                 .scrollIndicators(.hidden)
             }
         }
