@@ -10,29 +10,22 @@ struct MadeForUserPlaylistGridItem: View {
     var imageURL: String
     var title: String
     let colors: [Color] = [
-        .playlistPink,
-        .playlistMauve,
-        .playlistYellow
+        .paleRed,
+        .palePink,
+        .paleGreen,
+        .paleOrange
 
     ]
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             ImageLoaderView(url: imageURL)
-            LinearGradient(
-                colors: [
-                    .spotifyBlack.opacity(0.01),
-                    .spotifyBlack.opacity(0.5)
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
+            
             
             VStack(alignment: .leading) {
                 Image(systemName: "wave.3.forward.circle.fill")
                     .font(.footnote)
-                    .foregroundStyle(.spotifyWhite)
-                    .shadow(radius: 2)
+                    .foregroundStyle(.spotifyBlack)
                     .padding(6)
                     .frame(maxHeight: .infinity, alignment: .top)
                 

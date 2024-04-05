@@ -71,7 +71,7 @@ struct YourTopMixesGridItem: View {
     Rectangle()
         .frame(width: 160, height: 160).overlay {
             ImageLoaderView(url: Constants.randomImage)
-            YourTopMixesGridItem(imageURL: Constants.randomImage, title: "Green Day")
+            YourTopMixesGridItem(imageURL: Constants.randomImage, title: "A Day to Remember")
             
         }
 }
