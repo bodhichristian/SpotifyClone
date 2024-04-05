@@ -10,20 +10,72 @@ import SwiftfulUI
 
 struct PlaylistGridItem: View {
     
-    var imageSize: CGFloat = 100
+    var imageSize: CGFloat = 160
+    
     var imageURL: String
     var title: String
+    var style: PlaylistStyle
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ImageLoaderView(url: imageURL)
                 .frame(width: imageSize, height: imageSize)
+                .overlay {
+                    switch style {
+                    case .artistMix:
+                        artistMixOverlay
+                    default:
+                        Text("")
+                    }
+                }
             Text(title)
+                .font(.caption)
                 .foregroundStyle(.spotifyLightGray)
                 .lineLimit(2)
             
         }
         .frame(width: imageSize)
+    }
+    
+    private var artistMixOverlay: some View {
+        ZStack(alignment: .bottomLeading) {
+            LinearGradient(
+                colors: [
+                    .spotifyBlack.opacity(0.01),
+                    .spotifyBlack.opacity(0.5)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            VStack(alignment: .leading) {
+                Image(systemName: "wave.3.forward.circle.fill")
+                    .font(.footnote)
+                    .foregroundStyle(.spotifyWhite)
+                    .padding(6)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                
+                Rectangle()
+                    .foregroundStyle(Color.yellow)
+                    .frame(width: 6, height: 20)
+                
+                Rectangle()
+                    .foregroundStyle(Color.yellow)
+                    .frame(height: 6)
+            }
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            
+            VStack(alignment: .leading, spacing: 0) {
+            
+                Text("Artist Name")
+                    .lineLimit(2)
+                Text("Mix")
+            }
+            .font(.headline)
+            .fontWeight(.bold)
+            .foregroundStyle(.spotifyWhite)
+            .padding(.leading, 16)
+            .padding(.bottom, 12)
+        }
     }
 }
 
@@ -31,9 +83,37 @@ struct PlaylistGridItem: View {
     ZStack{
         Color.black.ignoresSafeArea()
         HStack {
-            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product")
-            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product")
-            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product")
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .artistMix)
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .artistMix)
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .artistMix)
         }
     }
 }
+
+
+enum PlaylistStyle {
+    case artistMix,
+         madeForUser,
+         recentlyPlayed,
+         popularRadio,
+         recommendedRadio,
+         basedOnRecentListening
+    
+    var title: String {
+        switch self {
+        case .artistMix:
+            "Artist Mix"
+        case .madeForUser:
+            "Made for "
+        case .recentlyPlayed:
+            "Recently Played"
+        case .popularRadio:
+            "Popular Radio"
+        case .recommendedRadio:
+            "RecommendedRadio"
+        case .basedOnRecentListening:
+            "Based on Recent Listening"
+        }
+    }
+}
+

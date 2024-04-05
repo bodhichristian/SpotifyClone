@@ -116,9 +116,9 @@ struct SpotifyHomeView: View {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(products) { product in
                             PlaylistGridItem(
-                                imageSize: 120,
                                 imageURL: product.firstImage,
-                                title: product.title
+                                title: product.title,
+                                style: .artistMix
                             )
                             .asButton(.press) {
                                 goToPlayListView(product: product)
