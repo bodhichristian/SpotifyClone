@@ -13,7 +13,7 @@ struct SpotifyHomeView: View {
     @Environment(\.router) var router
     
     @State private var currentUser: User? = nil
-    @State private var selectedCategory: Category? = nil
+    @State private var selectedCategory: Category? = .all
     @State private var products: [Product] = []
     @State private var productRows: [ProductRow] = []
     
@@ -79,7 +79,7 @@ struct SpotifyHomeView: View {
                         }
                 }
             }
-            .frame(width: 35, height: 35)
+            .frame(width: 30)
             
             ScrollView(.horizontal) {
                 HStack(spacing: 8) {

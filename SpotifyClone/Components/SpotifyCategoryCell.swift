@@ -13,7 +13,8 @@ struct SpotifyCategoryCell: View {
     
     var body: some View {
         Text(title)
-            .font(.callout)
+            .font(.caption2)
+            .fontWeight(.medium)
             .frame(minWidth: 32)
             .padding(.vertical, 8)
             .padding(.horizontal, 10)
