@@ -25,7 +25,7 @@ struct SpotifyHomeView: View {
             ScrollView{
                 LazyVStack(spacing: 2, pinnedViews: [.sectionHeaders]) {
                     Section {
-                        VStack(spacing: 16){
+                        VStack(spacing: 24){
                             recentsSection
                                 .padding(.horizontal, 16)
 
@@ -39,7 +39,6 @@ struct SpotifyHomeView: View {
                         header
                     }
                 }
-                .padding(.top, 8)
             }
             .scrollIndicators(.hidden)
             .clipped()
