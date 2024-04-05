@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ArtistMixOverlay: View {
     var artistName: String = "Artist Name"
+    let colors: [Color] = [
+        .playlistPink,
+        .playlistMauve,
+        .playlistYellow
+
+    ]
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -24,16 +30,19 @@ struct ArtistMixOverlay: View {
                 Image(systemName: "wave.3.forward.circle.fill")
                     .font(.footnote)
                     .foregroundStyle(.spotifyWhite)
+                    .shadow(radius: 2)
                     .padding(6)
                     .frame(maxHeight: .infinity, alignment: .top)
                 
-                Rectangle()
-                    .foregroundStyle(Color.yellow)
-                    .frame(width: 6, height: 20)
-                
-                Rectangle()
-                    .foregroundStyle(Color.yellow)
-                    .frame(height: 6)
+                VStack(alignment: .leading) {
+                    Rectangle()
+                        .frame(width: 6, height: 20)
+                    
+                    Rectangle()
+                        .frame(height: 6)
+                }
+                .foregroundStyle(colors.randomElement()!)
+
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             
