@@ -23,7 +23,7 @@ struct PlaylistGridItem: View {
                 .overlay {
                     switch style {
                     case .artistMix:
-                        artistMixOverlay
+                        ArtistMixOverlay()
                     default:
                         Text("")
                     }
@@ -35,47 +35,6 @@ struct PlaylistGridItem: View {
             
         }
         .frame(width: imageSize)
-    }
-    
-    private var artistMixOverlay: some View {
-        ZStack(alignment: .bottomLeading) {
-            LinearGradient(
-                colors: [
-                    .spotifyBlack.opacity(0.01),
-                    .spotifyBlack.opacity(0.5)
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            VStack(alignment: .leading) {
-                Image(systemName: "wave.3.forward.circle.fill")
-                    .font(.footnote)
-                    .foregroundStyle(.spotifyWhite)
-                    .padding(6)
-                    .frame(maxHeight: .infinity, alignment: .top)
-                
-                Rectangle()
-                    .foregroundStyle(Color.yellow)
-                    .frame(width: 6, height: 20)
-                
-                Rectangle()
-                    .foregroundStyle(Color.yellow)
-                    .frame(height: 6)
-            }
-            .frame(maxHeight: .infinity, alignment: .bottom)
-            
-            VStack(alignment: .leading, spacing: 0) {
-            
-                Text("Artist Name")
-                    .lineLimit(2)
-                Text("Mix")
-            }
-            .font(.headline)
-            .fontWeight(.bold)
-            .foregroundStyle(.spotifyWhite)
-            .padding(.leading, 16)
-            .padding(.bottom, 12)
-        }
     }
 }
 

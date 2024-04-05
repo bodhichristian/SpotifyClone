@@ -29,10 +29,10 @@ struct SpotifyHomeView: View {
                             recentsSection
                                 .padding(.horizontal, 16)
 
-                            if let product = products.first {
-                                newReleaseSection(product: product)
-                                    .padding(.horizontal, 16)
-                            }
+//                            if let product = products.first {
+//                                newReleaseSection(product: product)
+//                                    .padding(.horizontal, 16)
+//                            }
                             listRows
                         }
                     } header: {
@@ -106,11 +106,12 @@ struct SpotifyHomeView: View {
         ForEach(productRows) { row in
             VStack(spacing: 8) {
                 Text(row.title)
-                    .font(.title)
-                    .fontWeight(.semibold)
+                    .font(.title3)
+                    .fontWeight(.bold)
                     .foregroundStyle(.spotifyWhite)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
 
                 ScrollView(.horizontal) {
                     HStack(alignment: .top, spacing: 16) {
