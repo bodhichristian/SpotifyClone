@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftfulUI
 
-struct ImageTitleRowCell: View {
+struct PlaylistGridItem: View {
     
     var imageSize: CGFloat = 100
     var imageURL: String
@@ -31,9 +31,9 @@ struct ImageTitleRowCell: View {
     ZStack{
         Color.black.ignoresSafeArea()
         HStack {
-            ImageTitleRowCell(imageURL: Constants.randomImage, title: "Product")
-            ImageTitleRowCell(imageURL: Constants.randomImage, title: "Product")
-            ImageTitleRowCell(imageURL: Constants.randomImage, title: "Product")
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product")
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product")
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product")
         }
     }
 }

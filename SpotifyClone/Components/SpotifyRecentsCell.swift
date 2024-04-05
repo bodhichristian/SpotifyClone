@@ -14,10 +14,10 @@ struct SpotifyRecentsCell: View {
     var body: some View {
         HStack {
             ImageLoaderView(url: imageURL)
-                .frame(width: 55, height: 55)
+                .frame(width: 55, height: 50)
             
             Text(title)
-                .font(.callout)
+                .font(.caption2)
                 .fontWeight(.semibold)
                 .lineLimit(2)
             

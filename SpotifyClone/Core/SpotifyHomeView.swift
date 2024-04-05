@@ -115,7 +115,7 @@ struct SpotifyHomeView: View {
                 ScrollView(.horizontal) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(products) { product in
-                            ImageTitleRowCell(
+                            PlaylistGridItem(
                                 imageSize: 120,
                                 imageURL: product.firstImage,
                                 title: product.title

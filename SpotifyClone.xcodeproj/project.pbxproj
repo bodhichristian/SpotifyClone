@@ -11,7 +11,7 @@
 		AA4A96BF2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96BE2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift */; };
 		AA4E9E852BB8ED8C0093C769 /* View-ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */; };
 		AA4E9E872BB8EDE70093C769 /* SpotifyNewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */; };
-		AA4E9E892BB915280093C769 /* ImageTitleRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */; };
+		AA4E9E892BB915280093C769 /* PlaylistGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E882BB915280093C769 /* PlaylistGridItem.swift */; };
 		AA5F591B2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */; };
 		AA5F591D2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591C2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift */; };
 		AA5F591F2BBA232100ACF054 /* PlaylistDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591E2BBA232100ACF054 /* PlaylistDescriptionCell.swift */; };
@@ -38,7 +38,7 @@
 		AA4A96BE2BBE3E6D0002A7ED /* UINavigationController-SwipeToDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-SwipeToDismiss.swift"; sourceTree = "<group>"; };
 		AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ThemeColors.swift"; sourceTree = "<group>"; };
 		AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyNewReleaseCell.swift; sourceTree = "<group>"; };
-		AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleRowCell.swift; sourceTree = "<group>"; };
+		AA4E9E882BB915280093C769 /* PlaylistGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistGridItem.swift; sourceTree = "<group>"; };
 		AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylistView.swift; sourceTree = "<group>"; };
 		AA5F591C2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCell.swift; sourceTree = "<group>"; };
 		AA5F591E2BBA232100ACF054 /* PlaylistDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDescriptionCell.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				AA5F591E2BBA232100ACF054 /* PlaylistDescriptionCell.swift */,
 				AA5F591C2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift */,
 				AA4A96BC2BBDD2120002A7ED /* SongRowCell.swift */,
-				AA4E9E882BB915280093C769 /* ImageTitleRowCell.swift */,
+				AA4E9E882BB915280093C769 /* PlaylistGridItem.swift */,
 				AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */,
 				AADD10722BB79CFB00E2DE4B /* SpotifyRecentsCell.swift */,
 			);
@@ -261,7 +261,7 @@
 				AA4E9E852BB8ED8C0093C769 /* View-ThemeColors.swift in Sources */,
 				AADD10592BB4C95400E2DE4B /* Product.swift in Sources */,
 				AA5F591D2BBA1DAB00ACF054 /* PlaylistHeaderCell.swift in Sources */,
-				AA4E9E892BB915280093C769 /* ImageTitleRowCell.swift in Sources */,
+				AA4E9E892BB915280093C769 /* PlaylistGridItem.swift in Sources */,
 				AA5F591F2BBA232100ACF054 /* PlaylistDescriptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
