@@ -103,7 +103,7 @@ struct SpotifyHomeView: View {
     }
     
     private var listRows: some View {
-        ForEach(PlaylistStyle.allCases, id: \.self) { playlist in
+        ForEach(PlaylistStyle.allCases, id: \.title) { playlist in
             VStack(spacing: 8) {
                 Text(playlist.title)
                     .font(.title3)
@@ -119,7 +119,7 @@ struct SpotifyHomeView: View {
                             PlaylistGridItem(
                                 imageURL: product.firstImage,
                                 title: product.title,
-                                style: .artistMix
+                                style: .yourTopMixes
                             )
                             .asButton(.press) {
                                 goToPlayListView(product: product)

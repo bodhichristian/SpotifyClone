@@ -22,7 +22,7 @@ struct PlaylistGridItem: View {
                 .frame(width: imageSize, height: imageSize)
                 .overlay {
                     switch style {
-                    case .artistMix:
+                    case .yourTopMixes:
                         ArtistMixOverlay()
                     default:
                         Text("")
@@ -42,36 +42,36 @@ struct PlaylistGridItem: View {
     ZStack{
         Color.black.ignoresSafeArea()
         HStack {
-            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .artistMix)
-            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .artistMix)
-            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .artistMix)
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .yourTopMixes)
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .yourTopMixes)
+            PlaylistGridItem(imageURL: Constants.randomImage, title: "Product", style: .yourTopMixes)
         }
     }
 }
 
 
 enum PlaylistStyle: CaseIterable {
-    case artistMix,
+    case yourTopMixes,
          madeForUser,
          recentlyPlayed,
          popularRadio,
          recommendedRadio,
-         basedOnRecentListening
+         basedOnYourRecentListening
     
     var title: String {
         switch self {
-        case .artistMix:
-            "Artist Mix"
+        case .yourTopMixes:
+            "Your top mixes"
         case .madeForUser:
             "Made for "
         case .recentlyPlayed:
-            "Recently Played"
+            "Recently played"
         case .popularRadio:
-            "Popular Radio"
+            "Popular radio"
         case .recommendedRadio:
-            "Recommended Radio"
-        case .basedOnRecentListening:
-            "Based on Recent Listening"
+            "Recommended radio"
+        case .basedOnYourRecentListening:
+            "Based on your recent listening"
         }
     }
 }
