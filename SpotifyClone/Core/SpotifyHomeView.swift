@@ -103,9 +103,9 @@ struct SpotifyHomeView: View {
     }
     
     private var listRows: some View {
-        ForEach(productRows) { row in
+        ForEach(PlaylistStyle.allCases, id: \.self) { playlist in
             VStack(spacing: 8) {
-                Text(row.title)
+                Text(playlist.title)
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundStyle(.spotifyWhite)

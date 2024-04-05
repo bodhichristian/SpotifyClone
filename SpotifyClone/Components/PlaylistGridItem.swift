@@ -50,7 +50,7 @@ struct PlaylistGridItem: View {
 }
 
 
-enum PlaylistStyle {
+enum PlaylistStyle: CaseIterable {
     case artistMix,
          madeForUser,
          recentlyPlayed,
@@ -69,7 +69,7 @@ enum PlaylistStyle {
         case .popularRadio:
             "Popular Radio"
         case .recommendedRadio:
-            "RecommendedRadio"
+            "Recommended Radio"
         case .basedOnRecentListening:
             "Based on Recent Listening"
         }
