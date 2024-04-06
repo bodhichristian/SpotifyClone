@@ -8,7 +8,6 @@ import SwiftUI
 
 struct DailyMixPlaylistCoverView: View {
     var imageURL: String
-    var title: String
     let colors: [Color] = [
         .paleRed,
         .palePink,
@@ -51,7 +50,7 @@ struct DailyMixPlaylistCoverView: View {
     Rectangle()
         .frame(width: 160, height: 160).overlay {
             ImageLoaderView(url: Constants.randomImage)
-            DailyMixPlaylistCoverView(imageURL: Constants.randomImage, title: "A Day to Remember")
+            DailyMixPlaylistCoverView(imageURL: Constants.randomImage)
             
         }
 }

@@ -28,11 +28,11 @@ struct SpotifyHomeView: View {
                         VStack(spacing: 24){
                             recentsSection
                                 .padding(.horizontal, 16)
-
-//                            if let product = products.first {
-//                                newReleaseSection(product: product)
-//                                    .padding(.horizontal, 16)
-//                            }
+                            
+                            //                            if let product = products.first {
+                            //                                newReleaseSection(product: product)
+                            //                                    .padding(.horizontal, 16)
+                            //                            }
                             listRows
                         }
                     } header: {
@@ -104,27 +104,54 @@ struct SpotifyHomeView: View {
     
     private var listRows: some View {
         ForEach(PlaylistStyle.allCases, id: \.title) { playlist in
-            VStack(spacing: 8) {
-                Text(playlist.title)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.spotifyWhite)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-
-                ScrollView(.horizontal) {
-                    HStack(alignment: .top, spacing: 16) {
-                        ForEach(products) { product in
-                            YourTopMixesGridItem(imageURL: product.firstImage, title: product.title)
-                            .asButton(.press) {
-                                goToPlayListView(product: product)
+            
+            if playlist == .madeForUser {
+                VStack(spacing: 8) {
+                    Text(playlist.title)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.spotifyWhite)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                    
+                    ScrollView(.horizontal) {
+                        HStack(alignment: .top, spacing: 16) {
+                            ForEach(products) { product in
+                                DailyMixPlaylistCoverView(imageURL: products.first?.firstImage ?? "")
+                                    .asButton(.press) {
+                                        goToPlayListView(product: product)
+                                    }
                             }
                         }
+                        .padding(.horizontal, 16)
                     }
-                    .padding(.horizontal, 16)
+                    .scrollIndicators(.hidden)
                 }
-                .scrollIndicators(.hidden)
+                
+            } else {
+                VStack(spacing: 8) {
+                    Text(playlist.title)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.spotifyWhite)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                    
+                    ScrollView(.horizontal) {
+                        HStack(alignment: .top, spacing: 16) {
+                            ForEach(products) { product in
+                                YourTopMixesGridItem(imageURL: product.firstImage, title: product.title)
+                                    .asButton(.press) {
+                                        goToPlayListView(product: product)
+                                    }
+                            }
+                        }
+                        .padding(.horizontal, 16)
+                    }
+                    .scrollIndicators(.hidden)
+                }
             }
         }
     }
@@ -138,7 +165,7 @@ struct SpotifyHomeView: View {
                 )
                 .asButton(.press) {
                     goToPlayListView(product: product)
-
+                    
                 }
             }
             
