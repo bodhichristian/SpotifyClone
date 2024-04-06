@@ -13,7 +13,7 @@ struct SpotifyHomeView: View {
     @Environment(\.router) var router
     
     @State private var artistService = ArtistService()
-    @State private var currentUser: User? = nil
+    @State private var currentUser: User? = User.mock
     @State private var selectedCategory: Category? = .all
     @State private var products: [Product] = []
     @State private var productRows: [ProductRow] = []
@@ -30,10 +30,10 @@ struct SpotifyHomeView: View {
                             recentsSection
                                 .padding(.horizontal, 16)
                             
-                            //                            if let product = products.first {
-                            //                                newReleaseSection(product: product)
-                            //                                    .padding(.horizontal, 16)
-                            //                            }
+//                            if let product = products.first {
+//                                newReleaseSection(product: product)
+//                                    .padding(.horizontal, 16)
+//                            }
                             listRows
                         }
                     } header: {
@@ -46,7 +46,7 @@ struct SpotifyHomeView: View {
         }
         .task {
             await artistService.fetchArtistCollection()
-           // await getData()
+            // await getData()
         }
     }
     
@@ -119,11 +119,13 @@ struct SpotifyHomeView: View {
                     
                     ScrollView(.horizontal) {
                         HStack(alignment: .top, spacing: 16) {
-                            ForEach(products) { product in
-                                DailyMixPlaylistCoverView(imageURL: products.first?.firstImage ?? "")
-                                    .asButton(.press) {
-                                        goToPlayListView(product: product)
-                                    }
+                            if let artistCollection = artistService.artistCollection?.shuffled(){
+                                ForEach(artistCollection, id: \.artistID) { artist in
+                                    DailyMixPlaylistCoverView(imageURL: artist.artistImageURL ?? "")
+                                        .asButton(.press) {
+                                            // go to playlist view with artist item
+                                        }
+                                }
                             }
                         }
                         .padding(.horizontal, 16)
@@ -143,11 +145,13 @@ struct SpotifyHomeView: View {
                     
                     ScrollView(.horizontal) {
                         HStack(alignment: .top, spacing: 16) {
-                            ForEach(products) { product in
-                                YourTopMixesGridItem(imageURL: product.firstImage, title: product.title)
-                                    .asButton(.press) {
-                                        goToPlayListView(product: product)
-                                    }
+                            if let artistCollection = artistService.artistCollection?.shuffled() {
+                                ForEach(artistCollection, id: \.self) { artist in
+                                    YourTopMixesGridItem(imageURL: artist.artistImageURL ?? "", title: artist.artistName ?? "")
+                                        .asButton(.press) {
+                                            // goToPlayListView(product: product)
+                                        }
+                                }
                             }
                         }
                         .padding(.horizontal, 16)

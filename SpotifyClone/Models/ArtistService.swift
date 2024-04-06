@@ -68,16 +68,21 @@ class ArtistService {
     func fetchArtistCollection() async {
         let artistNames = ["Twenty One Pilots", "Imagine Dragons", "Panic! At the Disco", "Arcade Fire", "Vampire Weekend", "Foster the People", "Mumford & Sons", "The 1975", "Twenty One Pilots", "Bastille", "Glass Animals", "The Lumineers", "Walk the Moon", "Paramore", "The Neighbourhood", "Of Monsters and Men", "Hozier", "alt-J", "Royal Blood", "The Strokes", "Muse", "Cage the Elephant", "The Black Keys", "Coldplay", "Vance Joy"]
         
+        var fetchedArtists = [Artist]()
+        
         for artist in artistNames {
             do {
                 try await search(for: artist)
+                if let fetchedArtist {
+                    fetchedArtists.append(fetchedArtist)
+                    print(fetchedArtist.artistName ?? "")
+                }
             } catch {
-                
+                print(error.localizedDescription)
             }
-            if let fetchedArtist {
-                artistCollection?.append(fetchedArtist)
-            }
+            
         }
+        artistCollection = fetchedArtists
     }
     
     func fetchImageData(from urlString: String) async throws-> Data? {

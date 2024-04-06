@@ -29,8 +29,8 @@ struct LavaLamp: Shape {
             path.move(to: CGPoint(x: rect.minX, y: rect.height * 0.7))
             
             path.addQuadCurve( // from leading edge
-                to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.65),
-                control: CGPoint(x: rect.width * 0.2, y: rect.height * 0.45))
+                to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.7),
+                control: CGPoint(x: rect.width * 0.2, y: rect.height * 0.55))
             
             path.addQuadCurve( // to trailing edge
                 to: CGPoint(x: rect.maxX, y: rect.height * 0.8),
