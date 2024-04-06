@@ -19,6 +19,7 @@ struct YourTopMixesGridItem: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
+            
             ImageLoaderView(url: imageURL)
             LinearGradient(
                 colors: [

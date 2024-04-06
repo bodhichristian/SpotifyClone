@@ -21,7 +21,15 @@ struct MadeForUserPlaylistGridItem: View {
         ZStack(alignment: .bottomLeading) {
             ImageLoaderView(url: imageURL)
             
-            
+            LinearGradient(
+                colors: [
+                    .spotifyBlack.opacity(0.01),
+                    .spotifyBlack.opacity(0.01),
+                    .spotifyBlack
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
             VStack(alignment: .leading) {
                 Image(systemName: "wave.3.forward.circle.fill")
                     .font(.footnote)
