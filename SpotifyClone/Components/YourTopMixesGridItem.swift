@@ -24,7 +24,7 @@ struct YourTopMixesGridItem: View {
             LinearGradient(
                 colors: [
                     .spotifyBlack.opacity(0.01),
-                    .spotifyBlack.opacity(0.5)
+                    .spotifyBlack.opacity(0.8)
                 ],
                 startPoint: .top,
                 endPoint: .bottom
