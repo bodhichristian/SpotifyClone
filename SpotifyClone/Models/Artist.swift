@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model
+
 class Artist: Codable, Hashable {
     enum CodingKeys: String, CodingKey {
         case artistID = "idArtist"
@@ -93,9 +93,12 @@ class Artist: Codable, Hashable {
         hasher.combine(artistID)
     }
     
+
     static func ==(lhs: Artist, rhs: Artist) -> Bool {
         return lhs.artistID == rhs.artistID
     }
+    
+    
 }
 
 struct ArtistSearchResponse: Codable {

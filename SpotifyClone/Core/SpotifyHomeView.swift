@@ -12,6 +12,7 @@ import SwiftfulRouting
 struct SpotifyHomeView: View {
     @Environment(\.router) var router
     
+    @State private var artistService = ArtistService()
     @State private var currentUser: User? = nil
     @State private var selectedCategory: Category? = .all
     @State private var products: [Product] = []
@@ -44,7 +45,8 @@ struct SpotifyHomeView: View {
             .clipped()
         }
         .task {
-            await getData()
+            await artistService.fetchArtistCollection()
+           // await getData()
         }
     }
     

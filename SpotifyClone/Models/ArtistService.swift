@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
 class ArtistService {
     
     // Uncomment the line below and insert your Rapid API Key
     // let rapidAPIKey = ""
+    var artistCollection: [Artist]?
     var fetchedArtist: Artist?
     var fetchFailed = false
     
@@ -60,6 +62,21 @@ class ArtistService {
         } catch {
             self.fetchFailed = true
             throw ArtistServiceError.failedToFetchImages
+        }
+    }
+    
+    func fetchArtistCollection() async {
+        let artistNames = ["Twenty One Pilots", "Imagine Dragons", "Panic! At the Disco", "Arcade Fire", "Vampire Weekend", "Foster the People", "Mumford & Sons", "The 1975", "Twenty One Pilots", "Bastille", "Glass Animals", "The Lumineers", "Walk the Moon", "Paramore", "The Neighbourhood", "Of Monsters and Men", "Hozier", "alt-J", "Royal Blood", "The Strokes", "Muse", "Cage the Elephant", "The Black Keys", "Coldplay", "Vance Joy"]
+        
+        for artist in artistNames {
+            do {
+                try await search(for: artist)
+            } catch {
+                
+            }
+            if let fetchedArtist {
+                artistCollection?.append(fetchedArtist)
+            }
         }
     }
     
