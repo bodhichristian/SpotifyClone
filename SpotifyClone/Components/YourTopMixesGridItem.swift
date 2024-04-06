@@ -14,7 +14,7 @@ struct YourTopMixesGridItem: View {
         .playlistPink,
         .playlistMauve,
         .playlistYellow
-
+        
     ]
     
     var body: some View {
@@ -46,7 +46,7 @@ struct YourTopMixesGridItem: View {
                         .frame(height: 6)
                 }
                 .foregroundStyle(colors.randomElement()!)
-
+                
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             
@@ -56,15 +56,15 @@ struct YourTopMixesGridItem: View {
                 Text(" Mix")
             }
             .lineLimit(2)
-
+            
             .font(.headline)
-            .fontWeight(.bold)
+            .fontWeight(.heavy)
             .foregroundStyle(.spotifyWhite)
             .padding(.leading, 16)
             .padding(.bottom, 12)
         }
         .frame(width: 160, height: 160)
-
+        
     }
 }
 

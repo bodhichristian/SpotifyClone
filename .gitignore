@@ -8,3 +8,5 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 .build/
+
+SpotifyClone/Keys/

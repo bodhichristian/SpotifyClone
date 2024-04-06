@@ -36,7 +36,7 @@ struct DailyMixPlaylistCoverView: View {
             
             Text("Daily Mix")
                 .font(.headline)
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .foregroundStyle(.spotifyBlack)
                 .padding(.leading, 16)
                 .padding(.bottom, 12)
