@@ -12,10 +12,11 @@
 		AA4A96C12BBF88DC0002A7ED /* YourTopMixesGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96C02BBF88DC0002A7ED /* YourTopMixesGridItem.swift */; };
 		AA4A96C32BC011290002A7ED /* PlayllistStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96C22BC011290002A7ED /* PlayllistStyle.swift */; };
 		AA4A96C72BC016880002A7ED /* DailyMixPlaylistCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96C62BC016880002A7ED /* DailyMixPlaylistCoverView.swift */; };
-		AA4A96CA2BC077DF0002A7ED /* LavaLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96C92BC077DF0002A7ED /* LavaLamp.swift */; };
+		AA4A96CA2BC077DF0002A7ED /* LavaLampA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96C92BC077DF0002A7ED /* LavaLampA.swift */; };
 		AA4A96CD2BC0E3960002A7ED /* ArtistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96CC2BC0E3960002A7ED /* ArtistService.swift */; };
 		AA4A96CF2BC0E3FB0002A7ED /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96CE2BC0E3FB0002A7ED /* Artist.swift */; };
 		AA4A96D42BC0E6260002A7ED /* RapidAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96D32BC0E6260002A7ED /* RapidAPIKey.swift */; };
+		AA4A96D62BC21CB10002A7ED /* LavaLampB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A96D52BC21CB10002A7ED /* LavaLampB.swift */; };
 		AA4E9E852BB8ED8C0093C769 /* View-ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */; };
 		AA4E9E872BB8EDE70093C769 /* SpotifyNewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */; };
 		AA5F591B2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */; };
@@ -45,10 +46,11 @@
 		AA4A96C02BBF88DC0002A7ED /* YourTopMixesGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTopMixesGridItem.swift; sourceTree = "<group>"; };
 		AA4A96C22BC011290002A7ED /* PlayllistStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayllistStyle.swift; sourceTree = "<group>"; };
 		AA4A96C62BC016880002A7ED /* DailyMixPlaylistCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMixPlaylistCoverView.swift; sourceTree = "<group>"; };
-		AA4A96C92BC077DF0002A7ED /* LavaLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaLamp.swift; sourceTree = "<group>"; };
+		AA4A96C92BC077DF0002A7ED /* LavaLampA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaLampA.swift; sourceTree = "<group>"; };
 		AA4A96CC2BC0E3960002A7ED /* ArtistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistService.swift; sourceTree = "<group>"; };
 		AA4A96CE2BC0E3FB0002A7ED /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		AA4A96D32BC0E6260002A7ED /* RapidAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidAPIKey.swift; sourceTree = "<group>"; };
+		AA4A96D52BC21CB10002A7ED /* LavaLampB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaLampB.swift; sourceTree = "<group>"; };
 		AA4E9E842BB8ED8C0093C769 /* View-ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ThemeColors.swift"; sourceTree = "<group>"; };
 		AA4E9E862BB8EDE70093C769 /* SpotifyNewReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyNewReleaseCell.swift; sourceTree = "<group>"; };
 		AA5F591A2BBA1D6F00ACF054 /* SpotifyPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylistView.swift; sourceTree = "<group>"; };
@@ -87,7 +89,8 @@
 		AA4A96C82BC077AB0002A7ED /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				AA4A96C92BC077DF0002A7ED /* LavaLamp.swift */,
+				AA4A96C92BC077DF0002A7ED /* LavaLampA.swift */,
+				AA4A96D52BC21CB10002A7ED /* LavaLampB.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -298,7 +301,8 @@
 				AADD10672BB4D03500E2DE4B /* SpotifyCategoryCell.swift in Sources */,
 				AA4A96BD2BBDD2120002A7ED /* SongRowCell.swift in Sources */,
 				AADD10402BB4C35900E2DE4B /* ContentView.swift in Sources */,
-				AA4A96CA2BC077DF0002A7ED /* LavaLamp.swift in Sources */,
+				AA4A96D62BC21CB10002A7ED /* LavaLampB.swift in Sources */,
+				AA4A96CA2BC077DF0002A7ED /* LavaLampA.swift in Sources */,
 				AADD10632BB4CE7600E2DE4B /* SpotifyHomeView.swift in Sources */,
 				AADD10572BB4C92B00E2DE4B /* User.swift in Sources */,
 				AA4A96CD2BC0E3960002A7ED /* ArtistService.swift in Sources */,

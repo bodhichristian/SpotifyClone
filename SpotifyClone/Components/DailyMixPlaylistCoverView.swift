@@ -20,7 +20,7 @@ struct DailyMixPlaylistCoverView: View {
         ZStack(alignment: .bottomLeading) {
             ImageLoaderView(url: imageURL)
             
-            LavaLamp()
+            LavaLampA()
                 .foregroundStyle(colors.randomElement()!)
                 .opacity(0.9)
             VStack(alignment: .leading) {

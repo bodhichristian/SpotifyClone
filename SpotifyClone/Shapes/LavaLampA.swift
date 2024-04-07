@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct LavaLamp: Shape {
+struct LavaLampA: Shape {
     func path(in rect: CGRect) -> Path {
         Path { path in
+            // MARK: top lava
+
             path.move(to: CGPoint(x: rect.minX, y: rect.height * 0.2))
             
             path.addQuadCurve( // from leading edge
@@ -26,6 +28,7 @@ struct LavaLamp: Shape {
             
             path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
             
+            // MARK: bottom lava
             path.move(to: CGPoint(x: rect.minX, y: rect.height * 0.7))
             
             path.addQuadCurve( // from leading edge
@@ -43,7 +46,7 @@ struct LavaLamp: Shape {
 }
 
 #Preview {
-    LavaLamp()
+    LavaLampA()
         .border(.black)
         .frame(width: 160, height: 160)
         
