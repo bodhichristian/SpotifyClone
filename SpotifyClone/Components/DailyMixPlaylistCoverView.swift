@@ -9,10 +9,9 @@ import SwiftUI
 struct DailyMixPlaylistCoverView: View {
     var imageURL: String
     let colors: [Color] = [
-        .paleRed,
-        .palePink,
-        .paleGreen,
-        .paleOrange
+        .dailyMixBlue,
+        .dailyMixPink,
+        .dailyMixGreen
     ]
      
     
