@@ -52,7 +52,7 @@ struct YourTopMixesGridItem: View {
             
             HStack (alignment: .bottom,  spacing: 0) {
                 
-                Text(title)
+                Text(title) +
                 Text(" Mix")
             }
             .lineLimit(2)

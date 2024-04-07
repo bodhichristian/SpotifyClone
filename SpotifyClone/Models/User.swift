@@ -29,8 +29,8 @@ struct User: Codable, Identifiable {
     static var mock: User {
         User(
             id: 444,
-            firstName: "Ben",
-            lastName: "Franklin",
+            firstName: "Christian",
+            lastName: "Lavelle",
             age: 300,
             email: "electricity@usa.gov",
             phone: "12DF4",
