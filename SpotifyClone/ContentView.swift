@@ -13,7 +13,7 @@ struct ContentView: View {
     @Environment(\.router) var router
     
     var body: some View {
-        LavaLampA()
+        LavaLampB()
             .frame(width: 160, height: 160)
 //        List {
 //            Button("Open Spotify") {
