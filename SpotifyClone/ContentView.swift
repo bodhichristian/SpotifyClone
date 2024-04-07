@@ -13,15 +13,13 @@ struct ContentView: View {
     @Environment(\.router) var router
     
     var body: some View {
-        LavaLampB()
-            .frame(width: 160, height: 160)
-//        List {
-//            Button("Open Spotify") {
-//                router.showScreen(.fullScreenCover) { _ in
-//                    SpotifyHomeView()
-//                }
-//            }
-//        }
+        List {
+            Button("Open Spotify") {
+                router.showScreen(.fullScreenCover) { _ in
+                    SpotifyHomeView()
+                }
+            }
+        }
     }
 
 }

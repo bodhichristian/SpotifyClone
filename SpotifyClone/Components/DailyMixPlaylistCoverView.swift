@@ -13,14 +13,14 @@ struct DailyMixPlaylistCoverView: View {
         .palePink,
         .paleGreen,
         .paleOrange
-        
     ]
+     
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             ImageLoaderView(url: imageURL)
             
-            LavaLampA()
+            randomLava()
                 .foregroundStyle(colors.randomElement()!)
                 .opacity(0.9)
             VStack(alignment: .leading) {
@@ -29,8 +29,6 @@ struct DailyMixPlaylistCoverView: View {
                     .foregroundStyle(.spotifyBlack)
                     .padding(6)
                     .frame(maxHeight: .infinity, alignment: .top)
-                
-                
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
             
@@ -42,7 +40,19 @@ struct DailyMixPlaylistCoverView: View {
                 .padding(.bottom, 12)
         }
         .frame(width: 160, height: 160)
-        
+    }
+    
+    @ViewBuilder
+    private func randomLava() -> some View {
+        let randomIndex = Int.random(in: 0...2)
+        switch randomIndex {
+        case 0:
+            LavaLampA()
+        case 1:
+            LavaLampB()
+        default:
+            LavaLampC()
+        }
     }
 }
 

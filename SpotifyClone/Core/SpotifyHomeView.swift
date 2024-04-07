@@ -17,6 +17,7 @@ struct SpotifyHomeView: View {
     @State private var selectedCategory: Category? = .all
     @State private var products: [Product] = []
     @State private var productRows: [ProductRow] = []
+    @State private var user: User = .mock
     
     var body: some View {
         ZStack {
@@ -109,14 +110,18 @@ struct SpotifyHomeView: View {
             
             if playlist == .madeForUser {
                 VStack(spacing: 8) {
-                    Text(playlist.title)
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.spotifyWhite)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                    
+                    HStack(spacing: 0) {
+                        Text(playlist.title)
+                        Text(user.firstName)
+                        
+                    }
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.spotifyWhite)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                
                     ScrollView(.horizontal) {
                         HStack(alignment: .top, spacing: 16) {
                             if let artistCollection = artistService.artistCollection?.shuffled(){
